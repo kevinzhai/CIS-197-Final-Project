@@ -1,0 +1,15 @@
+{
+  "name": "CIS197FinalProject",
+  "author": "Kevin Zhai",
+  "version": "1.0.0",
+  "description": "D3 Data Visualizer",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "2.3.4",
+    "express": "4.13.3"
+  },
+  "license": "MIT"
+}
