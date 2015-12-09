@@ -1,15 +1,32 @@
-<link rel="stylesheet" type="text/css" href="/css/style.css" />
-<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<!DOCTYPE html>
 
-<h1>CIS 197 Final Project - D3</h1>
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="js/lib/jquery-1.11.3.min.js"></script>
+	<script src="js/lib/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lib/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lib/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lib/socket.io.js" type="text/javascript" charset="utf-8"></script>
+	<title>CIS197 Final</title>
+</head>
 
-<div class="chart">
-  <div style="width: 40px;">4</div>
-  <div style="width: 80px;">8</div>
-  <div style="width: 150px;">15</div>
-  <div style="width: 160px;">16</div>
-  <div style="width: 230px;">23</div>
-  <div style="width: 420px;">42</div>
-</div>
+<body id="center">
+	<h1>Bar Graph Builder</h1>
+	<div id="left"> 
+		Input Values
+		<br><br>
+		<input type="text" name="search" id="search" class="search form-control" value="" autocomplete="off" placeholder="Search for..."/>
+	</div>
+	<div id="right">
+		Bar Graph 
+		<div class="chart"></div>
+	</div>
 
-<script src="/js/jquery-1.11.3.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/model/entryModel.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/collection/entryCollection.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/graphView.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/view/inputView.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/router/router.js" type="text/javascript" charset="utf-8"></script>
+</body>
