@@ -11,7 +11,7 @@
 	<title>CIS197 Final</title>
 </head>
 
-<body class="center">
+<body class="center" bgcolor="#F5F5DC">
 	<h1>Bar Graph Builder</h1>
 	<div id="left" class="input-manager"> 
 		Input Values
@@ -19,7 +19,7 @@
 		
 		<script id="table-headers" type="text/template" class="center">
                 <tr class="row">
-                    <th class="col-md-6 " >X Label</th>
+                    <th class="col-md-6">X Label</th>
                     <th class="col-md-6">Y Value</th>
                     <th class="col-md-6">Options</th>
                 </tr>
@@ -33,7 +33,7 @@
         </script>
 
          <script id="result-template" type="text/template">
-                <tr class="row">
+                <tr class="row" id="{{xlabel}}">
                     <td class="col-md-6">{{xlabel}}</td>
                     <td class="col-md-6">{{yvalue}}</td>
                     <td class="col-md-6"> 
@@ -47,18 +47,23 @@
         <div id="search-container" class="listen-to" style="display: show"></div>
 		<button class="add-entry" type="button" class="btn btn-default" xlabel="{{xlabel}}">Add</button>
 		<br><br>
+		<div class="error" color="red"></div>
 		<table id="result-container" border="1" style="width:100%"></table>
 
 	</div>
 	<div id="right" class="graph-manager">
 		Bar Graph 
-		<div class="chart"></div>
+		<br><br>
+		<svg class="chart"></svg>
 	</div>
 
-	<script src="js/main.js"></script>
 	<script src="js/model/entryModel.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/collection/entryCollection.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/view/graphView.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/view/inputView.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/router/router.js" type="text/javascript" charset="utf-8"></script>
 </body>
+
+<footer class="footer">
+	<p>Kevin Zhai 2015</p>
+</footer>

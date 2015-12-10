@@ -18,20 +18,27 @@ $(function () {
     addEntry: function (e) {
       var x = document.getElementById('xentry').value;
       var y = document.getElementById('yentry').value;
+
       var newData = {
         xlabel: x,
         yvalue: y
       }
-      
-      if (window.entryCollection.where({xlabel: x}).length === 0) {
-        window.entryCollection.add(newData);
-        this.appendToContainer($('#result-template').html(), $(this.el).find('#result-container'), newData);
+
+      if (x === '' || y === '' || isNaN(y)) {
+        $('.error').empty();
+        $('<p>Invalid Input!</p>').appendTo( '.error' );
+      } else if (window.entryCollection.where({xlabel: x}).length === 0) {
+          $('.error').empty();
+          window.entryCollection.add(newData);
+          this.appendToContainer($('#result-template').html(), $(this.el).find('#result-container'), newData);
       }
 
     },
 
     deleteEntry: function (e) {
-      console.log($(e.target).attr('xlabel'));
+      var target = $(e.target).attr('xlabel');
+      $('#' + target).remove();
+      window.entryCollection.remove(window.entryCollection.where({xlabel: $(e.target).attr('xlabel')}));
     }
 
   });
