@@ -11,14 +11,46 @@
 	<title>CIS197 Final</title>
 </head>
 
-<body id="center">
+<body class="center">
 	<h1>Bar Graph Builder</h1>
-	<div id="left"> 
+	<div id="left" class="input-manager"> 
 		Input Values
 		<br><br>
-		<input type="text" name="search" id="search" class="search form-control" value="" autocomplete="off" placeholder="Search for..."/>
+		
+		<script id="table-headers" type="text/template" class="center">
+                <tr class="row">
+                    <th class="col-md-6 " >X Label</th>
+                    <th class="col-md-6">Y Value</th>
+                    <th class="col-md-6">Options</th>
+                </tr>
+        </script>
+
+		<script id="search-template" type="text/template">
+                <div class="col-md-6  col-md-offset-3">
+                    <input type="text" name="xentry" id="xentry" class="search form-control" value="" autocomplete="off" placeholder="Enter X Label"/>
+                    <input type="text" name="yentry" id="yentry" class="search form-control" value="" autocomplete="off" placeholder="Enter Y Value"/>
+                </div>
+        </script>
+
+         <script id="result-template" type="text/template">
+                <tr class="row">
+                    <td class="col-md-6">{{xlabel}}</td>
+                    <td class="col-md-6">{{yvalue}}</td>
+                    <td class="col-md-6"> 
+                    	<button type="button" class="delete-entry" xlabel="{{xlabel}}">Delete</button>
+                    </td>
+                </tr>
+        </script>
+
+        
+
+        <div id="search-container" class="listen-to" style="display: show"></div>
+		<button class="add-entry" type="button" class="btn btn-default" xlabel="{{xlabel}}">Add</button>
+		<br><br>
+		<table id="result-container" border="1" style="width:100%"></table>
+
 	</div>
-	<div id="right">
+	<div id="right" class="graph-manager">
 		Bar Graph 
 		<div class="chart"></div>
 	</div>

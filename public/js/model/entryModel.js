@@ -1,4 +1,4 @@
 $(function () {
-  var Stock = Backbone.Model.extend({});
-  window.entry = Stock;
+  var Entry = Backbone.Model.extend({});
+  window.Entry = Entry;
 });
