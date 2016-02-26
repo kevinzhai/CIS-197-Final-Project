@@ -1,5 +1,6 @@
-# CIS 197 Final Project 
-D3.js powered Bar graphing Web App
+# CIS 197 Final Project <br />
+![alt text](ExampleGraphs.png "Example Interface")
+D3.js powered Bar graphing Web App<br />
 Kevin Zhai <br />
 
 Hosted on https://kzd3.herokuapp.com/ <br />
