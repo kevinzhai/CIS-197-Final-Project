@@ -1,6 +1,8 @@
 # CIS 197 Final Project 
 D3.js powered Bar graphing Web App
-Kevin Zhai
+Kevin Zhai <br />
+
+Hosted on https://kzd3.herokuapp.com/ <br />
 
 A Node.JS WebApp that allows the user to create custom bar graphs <br />
 Features: <br />
