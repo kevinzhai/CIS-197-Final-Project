@@ -1,4 +1,5 @@
-CIS 197 Final Project using D3.js to build a Bar graphing tool
+# CIS 197 Final Project 
+D3.js powered Bar graphing Web App
 Kevin Zhai
 
 A Node.JS WebApp that allows the user to create custom bar graphs 
